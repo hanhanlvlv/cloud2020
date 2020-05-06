@@ -2,4 +2,4 @@
 
 Springcloud
 
-2020.5.6 更新config bus stream
+2020.5.6 更新config bus stream没怎么搞完

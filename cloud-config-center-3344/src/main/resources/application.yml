@@ -8,10 +8,66 @@ spring:
     config:
       server:
         git:
-          uri: git@github.com:hanhanlvlv/springcloud-config.git #Github上的git仓库名字
+#          uri: git@github.com:hanhanlvlv/springcloud-config.git
+          uri: https://github.com/hanhanlvlv/springcloud-config.git #Github上的git仓库名字
+#          ignoreLocalSshSettings: true
+#          force-pull: true
           ##搜索目录.这个目录指的是github上的目录
           search-paths:
             - springcloud-config
+          #巨坑的ssh连接要加入密钥
+#          private-key: |
+#            -----BEGIN RSA PRIVATE KEY-----
+#            MIIJJwIBAAKCAgEA2nLKBKIdvunHMi3zHDYGcAFOL5WxEYpd/npFAnmultFL14MY
+#            ejS1NvSkWgLYpo7awgiKpFc3r7e/Gy1dOIrkbquGDULWnWOKU/yXAzSmeDnOuDsm
+#            npB2eTq7UJkGnfVsE3FJ2Y14qEyJ9IKQIqdWbGV4X/dL9GfBgvspTqpFlUP14CLZ
+#            nt/rgnltFykoKMGLM8BhpddqTZOF2z5W9UQ/JEbYkJcEuJf9fskfR3WDonVjI0SQ
+#            G2Q02tD2lnGCx362Dh9moGdmh3d561MRww0k/W+ENT1w2OFnGUlA8rzkjTIvm+lU
+#            xCqJFGlWsBM8FwL8GLxbvYdPtSoQWk2QU1u3mxfnHzZbSrnOHKSYKSC+ojDHPjzs
+#            y5YHWVtbP2pHp+HXE01uzMXw6T0AYNhLmzZoi5G036Kh1+6GArcDxmWukus8jobM
+#            2qnN6QxtlvmhqAbOCQgmSVcfMmpRxshT55rjMi9JP9ZVT7R8f43+FYaGAf5DeQrY
+#            4hsrqzE7F8zmThYDGrGIxHguAbaYVirfvmakW7/nEdv6NG3oYqpkkvPnF71R6UHW
+#            OzQRXRYlhMYWfcdqDutcH3iC4B9BsMVgJc75VAlSqkyGi7Ei1C1/pKuLeUJLFcoq
+#            0gG/JCi/2fYVAZnHDBU8fT6tiW8Sh6+Lxc83Mm+d/asX11SYOEEBNWm7AAcCAwEA
+#            AQKCAgAK+REkwm/0ExIqdxxrIluYbLhcs4w9cVHfYozs3ufiM4k3viIQoW0o4YkP
+#            7GytkSdz77HnJ2porTYwS0sPeAqZdIw7Rkw5g7KDHYEIbDCggWbc4jvCY0dQN58J
+#            IWavsJBJObuX7f9NlOqpGZXb58PzlfVB/M4X7M5PogYlKXBtWwiSxa1gyaau2yKb
+#            szmNMoungdZl2jhAxVRH+w2rLE5vqA9g0/UswJW/NKMZl9GQ64ybTOpgNdxh0XVR
+#            gUosczT56KHjFM6Vp268X2PZBGQDRwLBGeD9Q/VF0+QrTUm9vfOeRU44vFo+aDwu
+#            hAjUrxWyuGNzVcSvOPmxT4wcY9MJI4043bsTxpelaFTnQs+50+o2wc8U4QA4oXy2
+#            sw1L5GFAX+8rMieXnO4gOqJLwC1Z0kGN9fhO8vqgVzFuGOQjT0Ew2dP8g0hjYRT1
+#            N+RofYnw2GBCxJsTAW5GJvICArdl+JgEKVU59bTOnG21L4UxTMUiAf01Hz0kuDK5
+#            NbdjV7mkTbBTmOuUgBo0eOv8KkvxpP6+hntNpaxB0mzb7Fag1m663Ysh/idlqShr
+#            4/vHkZMO/GnfIkmZIHCLN8KUi6jCdNobVmVRHJyNiVQGrBKP+CyGN4PRmkW0Ixni
+#            ggtvSojZKAmU1QvhcqSFnNeRM99lQue0G3FaECEkbo4j4ptRwQKCAQEA/bVZAcdN
+#            V1K5Md7wwlTkwgZvECYdOLT3dYx50jlEI7BLE8Be52QfdYkChhStYyjwuRu+VKtB
+#            eWlD4198gKE7urABv8vBia7s4c7ouLAsRTJCV4yaJZTWCuL1gRb7plwwuYeZACEc
+#            3Qegxvhpwiq3uDED2cJi1xWvITvMqfcIsNQeSgjHDz+2bv4+/D8iQrWSCx0maQvO
+#            mtBOZDOTE6gFrGc14cH3/zSgX1p5o3gP6QgrFV67OauYWNQ+i4VjmRa1jNGeNTDL
+#            VbyIMdQMxtgAuENQAzZgfQfb1INUwTGFVlTQRvEDK9cFr+K4186S2PBQJrg+caSV
+#            KJ7pBUkEAxoyeQKCAQEA3Gvo0GwOrI78LczZNR8JW8aC9tH7MHGsG4Qah+Gt9H9f
+#            7dGlchXTsT76Ggcm3gy/RTSkS+uhFr1NxYGpNXEsnz8WpuZ568saiSetkMIsSQpT
+#            usd573P+tJAiDuyYOXj0ZW1L5zRA7BUKOrXqMansfi8rihx58XrFNkzywxUjP3gV
+#            B6U3ewk+3LLuMMTrSFFlyKqKTcXzR5em4nHT7H2AaKsk48/ds6pcPkCKoxxxL10u
+#            ODeYLfynHHXfEoWBViI4pTVyFCxrSdnX0AAzagxuD78cP3yZe3AslRcRf7PKL4cZ
+#            Nan4eC/ntgNOlMUgpzjMVPQh5VnyHWp9mrP1nq4mfwKCAQBpJXRq+UeDbkRUd9n+
+#            ICLiiroSzkkEDHQWYo7GYndr9w9Wcz6h1Wv4UT0bhoxJcVk6zlW2T3eGMusw240E
+#            3k2b1IAVFgPy5O1FtHPcvx7J2seF8z6bXrDKuD8ZLgZDbye+bIUreY21yQiIDcH+
+#            96dGjgHTiO1fyJvZQShUNI6EgpS/CB4/op8gJvzBnAS98vRA6ObXWE5a+QPUIU/O
+#            MK+RQQEivDnkqdHhUuTgq8ykPn9kjus3PneYMPZu6mxZsQCzCNjxoHRU5xrm08Qr
+#            0K+TrkoF2s5oYw5nZ7qDituA6QucqxwuWiIAQA1tWy6e/BGrymYOwTAUMq/OQfGI
+#            u525AoIBAB0/VE0TiX7sGhoZrFiYHa3H0Wjew+3Rp3yfMsYE9AgVPq1XvBQ/QS+r
+#            o5QAju+30UllisdoJJ/XzpH+em1U7w7SWDcdLeBTutmoIierHCU08Zc/ELbtNUbQ
+#            OTSxwCEgI42xyviKvnKU+B6CNOkSGwdDSwuwa53XJIPoAe5Qx7SMQn4ZNhtlRqoS
+#            M/jUqEOYSWEu/9sCAR3myYYShIREwt0gmGyCEHDekg7QkZTDGWGng5KCDfdMJwBn
+#            w4m5nUfIkquZQ+HZYwMRnMlEvY28yH3eZekmp1bxs3i07uV6/cEAtB+ixg1sjdpg
+#            5fRnk8Wci8BaBIViQfYVQ0Vby6OaiBECggEAdmTcQRe/M7sErwNfVUW2r0ZnhM68
+#            yAmyZ7wW6opgy/SiQt/ImEQa/hhk4TQHEeOgdncXvFtt7d5e52g9bOqouTgXuG+2
+#            +KbRysA6ijaD5yBDeAsxC04g52rTtHOw1ylo8gUku+X+UdeO1LqrSo1eP1q6/Fc3
+#            1tKB000Mjigq3dvgEYxoB3gs0ubDUPd18r6K8I5EdglO5mKoH8XybHSnyvb+X4zY
+#            5ljoJVUEU7Lf4fGB4/CWIjnqIURBHltVKDGFgWK7Mhi7ue3r3437mfn0oTzHnzPW
+#            veWSk2+lfr+UHmugHamXEg7XEaLOqpVadWn14odVjjyEvKxdm8YokyKGNQ==
+#            -----END RSA PRIVATE KEY-----
       ##读取分支
       label: master
 

@@ -16,12 +16,16 @@
         <module name="cloud-consumerzk-order80" />
         <module name="cloud-provider-payment8005" />
         <module name="cloud-consumerconsul-order80" />
+        <module name="cloud-stream-rabbitmq-consumer8802" />
         <module name="cloud-consumer-feign-hystrix-order80" />
+        <module name="cloud-stream-rabbitmq-provider8801" />
         <module name="cloud-prodiver-payment8004" />
+        <module name="cloud-config-client-3355" />
         <module name="cloud-prodiver-payment8002" />
         <module name="cloud-gateway-gateway9527" />
         <module name="cloud-consumer-hystrix-dashboard9001" />
         <module name="cloud-consumer-feign-order80" />
+        <module name="cloud-config-client-3366" />
         <module name="cloud-eureka-service7002" />
       </profile>
     </annotationProcessing>

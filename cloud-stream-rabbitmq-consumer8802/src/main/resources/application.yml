@@ -21,6 +21,7 @@ spring:
           destination: studyExchange #表示要使用的Exchange名称定义
           content-type: application/json #设置消息类型，本次为json，本文要设置为“text/plain”
           binder: defaultRabbit #设置要绑定的消息服务的具体设置
+          group: atguiguA #分组消费会产生重复消费，同组消费不会产生
 
 eureka:
   client:
